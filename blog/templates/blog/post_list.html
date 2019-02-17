@@ -8,9 +8,13 @@
     <div>
         <h1>The best football blog!</h1>
     </div>
+    {%for post in posts %}
     <div>
-        <p>Here you will find all information about football.</p>
+        <p>published: {{post.data_publikacji}}</p>
+        <h1><a href="">{{post.tytul}}</a></h1>
+        <p>{{post.tekst|linebreaksbr }}</p>
     </div>
+    {% endfor %}
 </body>
 
 </html>
